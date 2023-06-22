@@ -1,0 +1,12 @@
+title = "tcco web"
+baseURL = "https://ssg.tcco.repl.co"
+
+types = ["post", "page"]
+
+post.dateInURL = true
+post.sortBy = "date"
+post.sortReverse = true
+
+page.dateInURL = false
+page.sortBy = "order"
+page.sortReverse = false

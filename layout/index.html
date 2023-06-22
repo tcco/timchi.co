@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  {% import "macros.html" as macros %} 
+  {{ macros.head(config.title) }}
+  {{ macros.navigation(content.pages) }}
+  <p align="middle">
+  <img src="../assets/kisspng-space-invaders.png" width="100" /></p>
+  
+   <div style="display:flex">
+  	<div style="flex:1; background-color:red">
+      <img src="assets/img_snow.jpg" alt="Snow" style="width:100%">
+    </div>
+  	<div style="flex:1; background-color:blue">
+      <div align="center">
+        <h1><strong>Tim Co</strong></h1>
+        Family<br>
+        Growth<br>
+        Bay Area<br>
+        Hong Kong<br>
+        
+      </div>
+    </div>
+  </div> 
+  
+  <body>
+    <h1>Posts</h1>
+    <ul>
+      {% for post in content.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a> (posted at {{ post.date
+        }})
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
