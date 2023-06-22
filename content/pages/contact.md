@@ -2,11 +2,7 @@ title = "Contact"
 order = 99
 +++++
 
-# Heading 1
-## Heading 2
-
-
-This is me
+Email: tcco.tim@gmail.com
 
 ![space invader](../assets/kisspng-space-invaders.png)
 

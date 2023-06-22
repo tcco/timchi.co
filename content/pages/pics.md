@@ -2,15 +2,8 @@ title = "Pics"
 order = 4
 +++++
 
-This is me
-
-<!-- ![space invader](../assets/kisspng-space-invaders.png)
-
-<p align="middle">
-  <img src="../assets/kisspng-space-invaders.png" width="100" />
-  <img src="../assets/kisspng-space-invaders.png" width="100" /> 
-  <img src="../assets/kisspng-space-invaders.png" width="100" />
-</p> -->
+<!-- refered to
+https://timnwells.medium.com/create-a-simple-responsive-image-gallery-with-html-and-css-fcb973f595ea -->
 
 
 <!doctype html>

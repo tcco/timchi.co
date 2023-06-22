@@ -98,12 +98,9 @@ def main():
   config = load_config("config.toml")
   print(json.dumps(config, indent=2))
   content = load_content_items(config, "content")
-  print("[-] loaded content")
   environment = load_templates("layout")
-  print("[-] loaded templates")
   output_dir = "public"
   render_site(config, content, environment, output_dir)
-  print(f"[-] site rendered in {output_dir}")
   list_files(output_dir)
 
 

@@ -2,12 +2,17 @@ title = "Home"
 order = 1
 +++++
 
-This is me
+![space invader](../assets/img_snow.jpg)
 
-![space invader](../assets/kisspng-space-invaders.png)
-
-<p align="middle">
-  <img src="../assets/kisspng-space-invaders.png" width="100" />
-  <img src="../assets/kisspng-space-invaders.png" width="100" /> 
-  <img src="../assets/kisspng-space-invaders.png" width="100" />
-</p>
+<div class="flex-container row">
+  <div>
+    <img src="../assets/hk-nature.jpg" width="300px" />
+  </div>
+  <div align="center">
+    <h1>Tim Co</h1>
+    Family<br>
+    Growth<br>
+    Bay Area<br>
+    Hong Kong<br>
+  </div>
+</div>

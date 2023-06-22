@@ -7,6 +7,7 @@
 
 {% macro navigation(pages) -%}
 <nav>
+  <link rel="stylesheet" href="/css/navigation.css" />
   <ul>
     {% for page in pages %}
     <li><a href="{{ page.url }}">{{ page.title }}</a></li>
