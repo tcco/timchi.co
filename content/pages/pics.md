@@ -16,6 +16,7 @@ This is me
 <!doctype html>
 <html lang="en">
  <head>
+  <link rel="stylesheet" type="text/css" href="../css/pics.css" />
   <meta charset="utf-8">
   
   <title>Image Gallery</title>
