@@ -6,7 +6,7 @@ order = 4
 https://timnwells.medium.com/create-a-simple-responsive-image-gallery-with-html-and-css-fcb973f595ea -->
 
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
  <head>
   <link rel="stylesheet" type="text/css" href="../css/pics.css" />
@@ -18,7 +18,9 @@ https://timnwells.medium.com/create-a-simple-responsive-image-gallery-with-html-
   
   <style type="text/css">  </style>
 </head>
-<body><div id="gallery">
+<body>
+  
+  <div id="gallery">
   
    <img src="../assets/kisspng-space-invaders.png">
    <img src="../assets/kisspng-space-invaders.png">

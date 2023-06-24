@@ -1,3 +1,13 @@
+body {
+  font-family: avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  font-size: 16px;
+}
+
+ul li a {
+  color: grey;
+}
+
+
 
 .flex-container {
   padding: 100;
@@ -17,14 +27,17 @@
   -webkit-flex-direction: row; 
   flex-direction: row;
   display: flex;
-  flex: 0 1 50%;
+  justify-content: center;
+  flex-grow: 1;
 }
+
+.row.images { 
+  margin-left: 50px;
+}
+
 
 .column { 
   -webkit-flex-direction: column; 
   flex-direction: column; 
   float: left;
-}
-.column li {
-  background: deepskyblue;
 }

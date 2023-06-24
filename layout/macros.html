@@ -15,3 +15,26 @@
   </ul>
 </nav>
 {% endmacro -%}
+
+{% macro bookshelf(books) -%}
+<div>
+  <ul>
+    <h2>Bookshelf</h2>
+    {% for book in books %}
+    <li><a href="{{ book.url }}">{{ book.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endmacro -%}
+
+
+{% macro gallery(folder) -%}
+<nav>
+  <ul>
+    {% for image_path in folder %}
+    <!-- <li><a href="{{ book[0] }}">{{ book[1] }}</a></li> -->
+     <li>{{ image_path }}</li>
+    {% endfor %}
+  </ul>
+</nav>
+{% endmacro -%}
