@@ -66,7 +66,7 @@ load_template = 1
 <div class="flex-container row">
   {% import "macros.html" as macros %}
    {% if this.bookshelf %}
-    {{macros.bookshelf(this.bookshelf) }}
+    {{ macros.bookshelf(this.bookshelf) }}
   {% endif %}
   <div class="flex-container column">
     <ul>

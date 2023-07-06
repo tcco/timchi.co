@@ -1,5 +1,7 @@
 title = "Pics"
 order = 4
+load_template = 1
+gallery_locations = ["pics"]
 +++++
 
 <!-- refered to
@@ -19,27 +21,9 @@ https://timnwells.medium.com/create-a-simple-responsive-image-gallery-with-html-
   <style type="text/css">  </style>
 </head>
 <body>
-  
   <div id="gallery">
-  
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
-   <img src="../assets/kisspng-space-invaders.png">
+    {% import "macros.html" as macros %}
+    {{ macros.gallery(this.gallery.pics) }}
   </div>
  
  </body>

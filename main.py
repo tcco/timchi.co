@@ -22,6 +22,15 @@ def load_config(config_filename):
 
   return config
 
+def load_gallery_path(gallery_path):
+  """
+  Load all images in folder for dynamic gallery images.
+  """
+  gallery_list = []
+  base_path = "static/assets/"
+  for image_fi in glob.glob(f"{base_path}{gallery_path}/*.jpg") + glob.glob(f"{base_path}{gallery_path}/*.png"):
+    gallery_list.append(image_fi.replace(f"{base_path}", "../assets/"))
+  return gallery_list
 
 def load_content_items(config, content_directory):
   """
@@ -49,6 +58,13 @@ def load_content_items(config, content_directory):
           'url'] = f"/{item['date'].year}/{item['date'].month:0>2}/{item['date'].day:0>2}/{item['slug']}/"
       else:
         item['url'] = f"/{item['slug']}/"
+        
+      if item.get("gallery_locations"):
+        # List of folders to store paths for for dynamic loading
+        item["gallery"] = {}
+        for gallery_path in item["gallery_locations"]:
+          item["gallery"][gallery_path] = load_gallery_path(gallery_path)
+        del item["gallery_locations"]
 
       items.append(item)
 

@@ -28,13 +28,10 @@
 {% endmacro -%}
 
 
-{% macro gallery(folder) -%}
-<nav>
-  <ul>
-    {% for image_path in folder %}
-    <!-- <li><a href="{{ book[0] }}">{{ book[1] }}</a></li> -->
-     <li>{{ image_path }}</li>
-    {% endfor %}
-  </ul>
-</nav>
+{% macro gallery(gallery_images) -%}
+  {% for img_path in gallery_images %}
+    <a href="{{ img_path }}">
+      <img src="{{ img_path }}" alt=>
+    </a>
+  {% endfor %}
 {% endmacro -%}
