@@ -3,6 +3,9 @@
   {% import "macros.html" as macros %}
   {{ macros.head(config.title) }}
   {{ macros.navigation(content.pages) }}
+  <head>
+    <link rel="stylesheet" href="/css/writing.css" />
+  </head>
   <body>
     <h1>{{ this.title }}</h1>
     <p>Posted at {{ this.date }}</p>

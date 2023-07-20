@@ -1,0 +1,45 @@
+title = "Uplift Mobile"
+date = 2022-12-30T11:47:00+02:00
+preview_image = ""
+preview_image_name = ""
+preview = "2022 began with a new initiative for me at Uplift. My sole objectives were to build a DTC mobile app and launch a new vertical in a..."
+
+load_template = 0
+gallery_locations = []
+
+tags = ["Projects"]
++++++
+
+2022 began with a new initiative for me at Uplift. My sole objectives were to build a DTC mobile app and launch a new vertical in a growth crew. This opportunity felt closer to home, much more similar to what I've previously shipped before - building from the ground up, capturing new opportunity as opposed to the [tech debt challenge](../../../../2020/11/17/tech-debt) prior.
+
+## Start
+Forming was interesting. There are limited resources in an organization, everyone is typically tied up in the roadmaps they've already committed to for years (if not a quarter) to come. I myself wasn't any exception, which made the journey to start all the more interesting.
+
+The executive team ended up carving out a couple execs, marketing, myself and then hired two new product growth managers that would come to be my closest colleagues for the year to come. An Asana roadmap was our starting spot and north star. We had to assemble developers, tooling, develop processes and get building. This lead time is no joke and ate up a month or two. Luckily we had the luxury of this project being top of mind and quickly landing a development agency out of Uruguay that was best in class, not having sunk cost on developers is a huge win.
+
+## Interuptions
+Essentially building as fast and heads down as possible, we launched two thirds of our app in two months. This would be the shopping, adding to shopping lists, and pre-approval and purchasing experience. Also included were ancillary user flows like registration, settings and as well integrated tooling for analytics, user feedback etc.
+
+Like any other build, there wasn't a chance this would go this smoothly. The remaining tab in our initial build was the borrower portal. One that would tie us back into existing infrastructure and create reliance on others - our internal team. It's not that there are inefficiencies inherently it's once again just the problem of them focusing on their own priorities.
+
+I myself as the sole engineering lead at the time, had my own distractions seeing as my wedding and extended honeymoon were planned for April/May ([Life Developments](../../../../2022/12/07/life-developments)). Naively believing the forward progress would be maintained, I took my leave of absence, only to come back to blockers on top of blockers. Features riddled with contextual know how and order of operations in terms of builds. Not only that but features that were being released internally now affected our builds, which took it's own degree of navigation.
+
+## Building Parity
+Alas product market fit is always the mystical creature everyone is searching for. However in our case, we were latching onto an already established strategy that had been successfully broached by our competitors. Our MVP had to meet a level of functional and feature parity before a it landed in any customers hands. This fact alone extended the build drastically. In a rapid iteration and new product offering situation, we would have gotten the product into users hands immediately, testing validity, iterating and pivoting as necessary. This build was interesting for the trust we had in the value prop and commitment we made (roughly six months) prior to allowing customers to freely utilize.
+
+
+## Beta
+
+We started with our non-production version and sent that through PlaybookUX. Fire and foremost wanted to confirm out messaging, user experience, and happy cases so to speak. There after, we released out production version only via Test Flight and Closed testing in Google play store (invite only).
+
+There is an interesting feedback loop any lending company must go through prior to having full confidence of any said product. We of course needed to ensure our users were getting into the app, understanding the offering, and getting them to transact (typical conversion metrics). That was milestone one. Our real test was if these users were apt to pay us back and understanding the differences in customer profile compared to our B2B product. The thing with that type of analysis is that it takes time to get paid back; thirty days at minimum for the first of many payments to even be due.
+
+So we accepted this fate, which for a developer turns out to be a sense of relief and getting time to harden your product. We iterated on UX improvements, add subtle features, and continued to release to additional batches of existing Uplift users. Our extended beta was a balance of speed and thoroughness, which in hindsight we can all be thankful for.
+
+## Release
+
+We finally released in early November, getting it into the wild prior to Black Friday. We're happy to say the functionality and activity since release has been fantastic. Feel free to download and enjoy the BNPL offerings below!
+
+Android: [https://play.google.com/store/apps/details?id=com.upliftinc.android&pli=1](https://play.google.com/store/apps/details?id=com.upliftinc.android&pli=1)
+
+iOS: [https://apps.apple.com/us/app/uplift-mobile-app/id1595621944](https://apps.apple.com/us/app/uplift-mobile-app/id1595621944)

@@ -12,8 +12,6 @@ tags = ["Daily"]
 
 {% import "macros.html" as macros %}
 
-# Welcome Kennedy Rachel Co
-
 *Will be a longer post and for good reason. You'll get to see the journey thus far with our little one. The narration of these images could go on and on but kept to a minimum. Kennedy is about to turn 6 months old, so it seemed right to revisit memory lane.*
 
 ## First Born
