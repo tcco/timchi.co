@@ -28,8 +28,12 @@ def load_gallery_path(gallery_path):
   """
   gallery_list = []
   base_path = "static/assets/"
-  for image_fi in glob.glob(f"{base_path}{gallery_path}/*.jpg") + glob.glob(f"{base_path}{gallery_path}/*.png"):
-    gallery_list.append(image_fi.replace(f"{base_path}", "../assets/"))
+  FILE_TYPES = [".jpg", ".jpeg", ".png", ".gif"]
+  FILE_TYPES += [ftype.upper() for ftype in FILE_TYPES]
+
+  for file_type in FILE_TYPES:
+    for image_fi in glob.glob(f"{base_path}{gallery_path}/*{file_type}"):
+      gallery_list.append(image_fi.replace(f"{base_path}", "../assets/"))
   return gallery_list
 
 def load_content_items(config, content_directory):
@@ -57,13 +61,13 @@ def load_content_items(config, content_directory):
         item[
           'url'] = f"/{item['date'].year}/{item['date'].month:0>2}/{item['date'].day:0>2}/{item['slug']}/"
       else:
-        item['url'] = f"/{item['slug']}/"
+        item['url'] = "/" if "home" in item["slug"] else f"/{item['slug']}"
         
       if item.get("gallery_locations"):
         # List of folders to store paths for for dynamic loading
         item["gallery"] = {}
         for gallery_path in item["gallery_locations"]:
-          item["gallery"][gallery_path] = load_gallery_path(gallery_path)
+          item["gallery"][gallery_path.replace("/", "_")] = load_gallery_path(gallery_path)
         del item["gallery_locations"]
 
       items.append(item)
@@ -96,7 +100,6 @@ def render_site(config, content, environment, output_directory):
   """
   Iterate page types and render templates
   """
-
   def render_type(content_type):  # <-- new inner function
     """
     Renders the core type with respective jinja template
@@ -104,7 +107,7 @@ def render_site(config, content, environment, output_directory):
     """
     template = environment.get_template(f"{content_type}.html")
     for item in content[config[content_type]["plural"]]:
-      path = f"public/{item['url']}"
+      path = f"public/{item['url']}/" 
       pathlib.Path(path).mkdir(parents=True, exist_ok=True)
       with open(path + "index.html", 'w') as file:
         if item.get("load_template"):
@@ -120,9 +123,11 @@ def render_site(config, content, environment, output_directory):
     render_type(content_type)
 
   # Homepage
-  index_template = environment.get_template("index.html")
-  with open(f"{output_directory}/index.html", 'w') as file:
-    file.write(index_template.render(config=config, content=content))
+  # Note: homepage is now handled by content/pages/home.md and is overwritten here
+  # https://replit.com/@tcco/ssg#main.py:61
+  # index_template = environment.get_template("index.html")
+  # with open(f"{output_directory}/index.html", 'w') as file:
+  #   file.write(index_template.render(config=config, content=content))
 
   # Static files
   distutils.dir_util.copy_tree("static", output_directory)

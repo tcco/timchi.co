@@ -29,9 +29,41 @@
 
 
 {% macro gallery(gallery_images) -%}
-  {% for img_path in gallery_images %}
-    <a href="{{ img_path }}">
-      <img src="{{ img_path }}" alt=>
-    </a>
-  {% endfor %}
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/pics.css" />
+    <meta charset="utf-8">  
+    {% for img_path in gallery_images %}
+      <link rel="preload" href="{{ img_path }}" as="image">
+    {% endfor %}
+  </head>
+  <body>
+    <div id="gallery">
+      {% for img_path in gallery_images %}
+        <a href="{{ img_path }}">
+          <img src="{{ img_path }}" alt=>
+        </a>
+    {% endfor %}
+    </div>
+ </body>
+</html>
+{% endmacro -%}
+
+{% macro post_gallery(gallery_images) -%}
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/pics.css" />
+    <meta charset="utf-8">  
+    {% for img_path in gallery_images %}
+      <link rel="preload" href="../../../{{ img_path }}" as="image">
+    {% endfor %}
+  </head>
+  <body>
+    <div id="gallery">
+      {% for img_path in gallery_images %}
+        <a href="../../../{{ img_path }}">
+          <img src="../../../{{ img_path }}" alt=>
+        </a>
+      {% endfor %}
+    </div>
+ </body>
+</html>
 {% endmacro -%}

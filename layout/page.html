@@ -3,10 +3,10 @@
   {% import "macros.html" as macros %} 
   {{ macros.head(config.title) }}
   {{ macros.navigation(content.pages) }}
-  <body>
+  <body style="width: 100vw;height: 100vh">
     <h1>{{ this.title }}</h1>
     {{ this.content }}
-    <p><a href="{{ config.baseURL }}/home">Return to the homepage &#10558;</a></p>
+    <p><a href="{{ config.baseURL }}">home &#10558;</a></p>
   </body>
   <!-- TODO Add footer of social icons -->
 </html>

@@ -10,20 +10,20 @@
   <link rel="stylesheet" href="/css/navigation.css" />
   <ul>
     
-    <li><a href="/home/">Home</a></li>
+    <li><a href="/">Home</a></li>
     
-    <li><a href="/current/">Current</a></li>
+    <li><a href="/current">Current</a></li>
     
-    <li><a href="/writing/">Writing</a></li>
+    <li><a href="/writing">Writing</a></li>
     
-    <li><a href="/pics/">Pics</a></li>
+    <li><a href="/pics">Pics</a></li>
     
-    <li><a href="/contact/">Contact</a></li>
+    <li><a href="/contact">Contact</a></li>
     
   </ul>
 </nav>
 
-  <body>
+  <body style="width: 100vw;height: 100vh">
     <h1>Pics</h1>
     <!-- refered to
 https://timnwells.medium.com/create-a-simple-responsive-image-gallery-with-html-and-css-fcb973f595ea -->
@@ -31,136 +31,208 @@ https://timnwells.medium.com/create-a-simple-responsive-image-gallery-with-html-
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <link rel="stylesheet" type="text/css" href="../css/pics.css" />
-  <meta charset="utf-8">
-
+  <!-- <link rel="stylesheet" type="text/css" href="/css/pics.css" />
+  <meta charset="utf-8">   -->
   <title>Image Gallery</title>
   <meta name="description" content="Responsive Image Gallery">
   <meta name="author" content="Tim Co">
-
-  <style type="text/css">  </style>
 </head>
-<body>
-  <div id="gallery">
-    
-    
-    <a href="../assets/pics/17-6-17-5715.jpg">
-      <img src="../assets/pics/17-6-17-5715.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/IMG_0917.jpg">
-      <img src="../assets/pics/IMG_0917.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/mission-peak-ny.jpg">
-      <img src="../assets/pics/mission-peak-ny.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/old-school17-6-17-5715a.jpg">
-      <img src="../assets/pics/old-school17-6-17-5715a.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/yosemite-taft.jpg">
-      <img src="../assets/pics/yosemite-taft.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/banff-view.jpg">
-      <img src="../assets/pics/banff-view.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/tahoe-pinn.jpg">
-      <img src="../assets/pics/tahoe-pinn.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/havasu-hike.jpg">
-      <img src="../assets/pics/havasu-hike.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/yosemite-taft-walking.jpg">
-      <img src="../assets/pics/yosemite-taft-walking.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/Hawaii-0206.jpg">
-      <img src="../assets/pics/Hawaii-0206.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/slo-avila-valley-barn.jpg">
-      <img src="../assets/pics/slo-avila-valley-barn.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/yosemite-nevada.jpg">
-      <img src="../assets/pics/yosemite-nevada.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/Hawaii-0260.jpg">
-      <img src="../assets/pics/Hawaii-0260.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/maryland-view.jpg">
-      <img src="../assets/pics/maryland-view.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/penner-vantage.jpg">
-      <img src="../assets/pics/penner-vantage.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/IMG_20171027_131548.jpg">
-      <img src="../assets/pics/IMG_20171027_131548.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/wedding-aisle.jpg">
-      <img src="../assets/pics/wedding-aisle.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/pismo-atv.jpg">
-      <img src="../assets/pics/pismo-atv.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/sunfish.jpg">
-      <img src="../assets/pics/sunfish.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/just-sold.jpg">
-      <img src="../assets/pics/just-sold.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/penner-lake-view.jpg">
-      <img src="../assets/pics/penner-lake-view.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/IMG_0419.jpg">
-      <img src="../assets/pics/IMG_0419.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/IMG_2476.jpg">
-      <img src="../assets/pics/IMG_2476.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/flying.jpg">
-      <img src="../assets/pics/flying.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/IMG_2379.jpg">
-      <img src="../assets/pics/IMG_2379.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/IMG_20190601_131029.jpg">
-      <img src="../assets/pics/IMG_20190601_131029.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/tahoe-11-5-18-46a2.jpg">
-      <img src="../assets/pics/tahoe-11-5-18-46a2.jpg" alt=>
-    </a>
-  
-    <a href="../assets/pics/IMG_2780.jpg">
-      <img src="../assets/pics/IMG_2780.jpg" alt=>
-    </a>
-  
 
-  </div>
 
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/pics.css" />
+    <meta charset="utf-8">  
+    
+      <link rel="preload" href="../assets/pics/17-6-17-5715.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/IMG_0917.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/mission-peak-ny.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/old-school17-6-17-5715a.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/yosemite-taft.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/banff-view.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/tahoe-pinn.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/havasu-hike.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/yosemite-taft-walking.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/Hawaii-0206.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/slo-avila-valley-barn.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/yosemite-nevada.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/Hawaii-0260.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/maryland-view.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/penner-vantage.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/IMG_20171027_131548.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/wedding-aisle.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/pismo-atv.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/sunfish.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/just-sold.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/penner-lake-view.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/IMG_0419.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/IMG_2476.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/flying.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/IMG_2379.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/IMG_20190601_131029.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/tahoe-11-5-18-46a2.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/IMG_2780.jpg" as="image">
+    
+      <link rel="preload" href="../assets/pics/IMG_3638.JPG" as="image">
+    
+      <link rel="preload" href="../assets/pics/IMG_3625.JPG" as="image">
+    
+  </head>
+  <body>
+    <div id="gallery">
+      
+        <a href="../assets/pics/17-6-17-5715.jpg">
+          <img src="../assets/pics/17-6-17-5715.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/IMG_0917.jpg">
+          <img src="../assets/pics/IMG_0917.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/mission-peak-ny.jpg">
+          <img src="../assets/pics/mission-peak-ny.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/old-school17-6-17-5715a.jpg">
+          <img src="../assets/pics/old-school17-6-17-5715a.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/yosemite-taft.jpg">
+          <img src="../assets/pics/yosemite-taft.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/banff-view.jpg">
+          <img src="../assets/pics/banff-view.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/tahoe-pinn.jpg">
+          <img src="../assets/pics/tahoe-pinn.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/havasu-hike.jpg">
+          <img src="../assets/pics/havasu-hike.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/yosemite-taft-walking.jpg">
+          <img src="../assets/pics/yosemite-taft-walking.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/Hawaii-0206.jpg">
+          <img src="../assets/pics/Hawaii-0206.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/slo-avila-valley-barn.jpg">
+          <img src="../assets/pics/slo-avila-valley-barn.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/yosemite-nevada.jpg">
+          <img src="../assets/pics/yosemite-nevada.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/Hawaii-0260.jpg">
+          <img src="../assets/pics/Hawaii-0260.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/maryland-view.jpg">
+          <img src="../assets/pics/maryland-view.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/penner-vantage.jpg">
+          <img src="../assets/pics/penner-vantage.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/IMG_20171027_131548.jpg">
+          <img src="../assets/pics/IMG_20171027_131548.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/wedding-aisle.jpg">
+          <img src="../assets/pics/wedding-aisle.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/pismo-atv.jpg">
+          <img src="../assets/pics/pismo-atv.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/sunfish.jpg">
+          <img src="../assets/pics/sunfish.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/just-sold.jpg">
+          <img src="../assets/pics/just-sold.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/penner-lake-view.jpg">
+          <img src="../assets/pics/penner-lake-view.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/IMG_0419.jpg">
+          <img src="../assets/pics/IMG_0419.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/IMG_2476.jpg">
+          <img src="../assets/pics/IMG_2476.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/flying.jpg">
+          <img src="../assets/pics/flying.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/IMG_2379.jpg">
+          <img src="../assets/pics/IMG_2379.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/IMG_20190601_131029.jpg">
+          <img src="../assets/pics/IMG_20190601_131029.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/tahoe-11-5-18-46a2.jpg">
+          <img src="../assets/pics/tahoe-11-5-18-46a2.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/IMG_2780.jpg">
+          <img src="../assets/pics/IMG_2780.jpg" alt=>
+        </a>
+    
+        <a href="../assets/pics/IMG_3638.JPG">
+          <img src="../assets/pics/IMG_3638.JPG" alt=>
+        </a>
+    
+        <a href="../assets/pics/IMG_3625.JPG">
+          <img src="../assets/pics/IMG_3625.JPG" alt=>
+        </a>
+    
+    </div>
  </body>
 </html>
-    <p><a href="https://ssg.tcco.repl.co/home">Return to the homepage &#10558;</a></p>
+
+</html>
+    <p><a href="https://ssg.tcco.repl.co">home &#10558;</a></p>
   </body>
+  <!-- TODO Add footer of social icons -->
 </html>
